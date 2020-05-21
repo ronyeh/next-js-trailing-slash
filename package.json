@@ -1,0 +1,10 @@
+{
+  "name": "next-js-trailing-slash",
+  "version": "1.0.0",
+  "description": "Examples to test how Next.js handles trailing slashes in URLs.",
+  "main": "pages/index.js",
+  "repository": "git@github.com:ronyeh/next-js-trailing-slash.git",
+  "author": "Ron Yeh <ronyeh@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
