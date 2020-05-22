@@ -7,6 +7,11 @@
   "author": "Ron Yeh <ronyeh@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "next": "^9.4.2",
     "react": "^16.13.1",
