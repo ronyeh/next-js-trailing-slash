@@ -44,3 +44,30 @@ Examples to test how Next.js handles trailing slashes in URLs.
     };
     ```
 5. `yarn run dev` starts a development server on [localhost port 3000](http://localhost:3000).
+6. On the [Getting Started](https://nextjs.org/docs/getting-started) page, it describes static file serving via a `./public/` folder. Add a public folder with some files.
+7. Click next to move on to [Pages](https://nextjs.org/docs/basic-features/pages). According to the docs, our website should support the path `/about/meet-the-team`.
+8. Read the section **Pages with Dynamic Routes** and add `[id].js` and two `*.js` files in the `/posts/` folder.
+    ```
+    pages/
+        posts/
+            [id].js
+            1.js
+            2.js
+    ```
+9. Read the intro to [Routing](https://nextjs.org/docs/routing/introduction). The docs say that the **"router will automatically route files named \`index\` to the root of the directory."** The docs provide these two examples:
+    ```
+    pages/index.js      → /
+    pages/blog/index.js → /blog
+    ```
+    Depending on the web development background of the person reading this page, the "root of the directory" might be interpreted as including a **trailing slash**. This could be a source of developer confusion.
+    ```
+    pages/index.js      → /        This ends in a slash.
+    pages/blog/index.js → /blog/   This ends in a slash.
+    ```
+10. Add some `Link` components to do client-side route transitions. Add enough `Link` components to individual pages so we can navigate back and forth between the site.
+11. Here are some URLs to test:
+* http://localhost:3000/
+* http://localhost:3000/about
+* http://localhost:3000/about/
+12. Build and test locally
+13. Deploy on [Vercel](https://vercel.com) using default options. The test site is now live at https://next-js-trailing-slash.now.sh.

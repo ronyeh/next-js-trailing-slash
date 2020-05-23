@@ -1,3 +1,8 @@
 export default () => {
-    return <div>We have four locations.</div>;
+    return (
+        <>
+            <div>/locations/index.js</div>
+            <div>We have four locations.</div>
+        </>
+    );
 };
