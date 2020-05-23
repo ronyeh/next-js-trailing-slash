@@ -1,5 +1,6 @@
 # Next JS Trailing Slash Tests
 Examples to test how Next.js handles trailing slashes in URLs.
+Especially check to see if the behavior is different during development and production.
 
 
 # Steps Taken
@@ -65,9 +66,19 @@ Examples to test how Next.js handles trailing slashes in URLs.
     pages/blog/index.js → /blog/   This ends in a slash.
     ```
 10. Add some `Link` components to do client-side route transitions. Add enough `Link` components to individual pages so we can navigate back and forth between the site.
-11. Here are some URLs to test:
-* http://localhost:3000/
-* http://localhost:3000/about
-* http://localhost:3000/about/
-12. Build and test locally
-13. Deploy on [Vercel](https://vercel.com) using default options. The test site is now live at https://next-js-trailing-slash.now.sh.
+11. Build and test locally with `yarn run dev`.
+12. Deploy on [Vercel](https://vercel.com) using the default options.
+13. The site is deployed to https://next-js-trailing-slash.now.sh.
+
+# Test URLs
+| Path                                     | Development                              | Production                            |
+|------------------------------------------|------------------------------------------|---------------------------------------|
+| / | http://localhost:3000/ | https://next-js-trailing-slash.now.sh |
+| /about | [DEV/about](http://localhost:3000/about) | [PROD/about](https://next-js-trailing-slash.now.sh/about) |
+| /about/contact-us/facebook/business-page | [DEV/.../business-page](http://localhost:3000/about/contact-us/facebook/business-page) | [PROD/.../business-page](https://next-js-trailing-slash.now.sh/about/contact-us/facebook/business-page) |
+
+
+# Notes
+* Dynamic routing with a file has interesting edge case. It works differently in production on Vercel vs in development. Not all cases where it differs with a component!
+* XXX
+* XXX
